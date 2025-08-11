@@ -106,16 +106,16 @@ const playMusic = (track, pause = false) => {
 // So here we must hardcode or maintain a list of folders manually.
 
 async function displayAlbums() {
-  // List of your folders (replace or extend this array with your actual folders)
-  const folders = ['South', 'sad', 'romantic'];
+  const folders = [
+    'TopHits2025', 'TopHits', 'South', 'sad', 'romantic', 'pop', 'Phonk',
+    'party', 'Odia', 'Motivation', 'Mashup', 'EDM', 'djsongs', 'Devotional', 'bhojpuri'
+  ];
 
   let cardContainer = document.querySelector(".cardContainer");
-  cardContainer.innerHTML = ''; // Clear previous
+  cardContainer.innerHTML = '';
 
   for (const folder of folders) {
-    // Compose jsDelivr URL for info.json
     const url = `https://cdn.jsdelivr.net/gh/AbhishekSharma-9/Spotify-Clone@main/songs/${folder}/info.json`;
-
     let res = await fetch(url);
     if (!res.ok) {
       console.warn(`Could not load info.json for folder ${folder}`);
@@ -132,14 +132,12 @@ async function displayAlbums() {
               stroke-linejoin="round" />
           </svg>
         </div>
-
         <img src="https://cdn.jsdelivr.net/gh/AbhishekSharma-9/Spotify-Clone@main/songs/${folder}/cover.jpg" alt="${response.title} cover">
         <h3>${response.title}</h3>
         <p style="font-size: 14px">${response.description}</p>
       </div>`;
   }
 
-  // Add click listener to load playlist
   Array.from(document.getElementsByClassName("card")).forEach(e => {
     e.addEventListener("click", async item => {
       songs = await getSongs(item.currentTarget.dataset.folder);
