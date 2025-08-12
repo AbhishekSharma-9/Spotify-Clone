@@ -17,6 +17,7 @@ https://abhisheksharma-9.github.io/Spotify-Clone/
 - [Folder Structure](#folder-structure)  
 - [Contributing](#contributing)  
 - [License](#license)
+- [Creator](#project-creator)
 
 ---
 
