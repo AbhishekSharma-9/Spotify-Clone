@@ -215,7 +215,7 @@ body {
 }
 
 .songList{
-    height: 470px;
+    height: 468px;
     overflow: auto;
     margin-bottom: 10px;
 }
@@ -462,4 +462,5 @@ body {
     margin-bottom: 20px;
 }
 }
+
 
