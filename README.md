@@ -34,7 +34,7 @@ https://abhisheksharma-9.github.io/Spotify-Clone/
 ## Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: JavaScript(Just to Fetch the Songs)
+- **Backend**: JavaScript (Just to Fetch the Songs)
 - **Hosting**: GitHub Pages (via `gh-pages`) and jsDelivr
 
 ---
